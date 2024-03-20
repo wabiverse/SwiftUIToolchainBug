@@ -15,5 +15,7 @@ jobs:
         with:
           swift-version: ${{ matrix.swift }}
       - uses: actions/checkout@v4
+      - name: 🖥 Install Gtk
+        run: sudo apt install libgtk-4-dev
       - name: 📦 Build
         run: swift build -c release --target SwiftUIToolchainBug
