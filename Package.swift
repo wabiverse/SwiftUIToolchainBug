@@ -19,11 +19,6 @@ let package = Package(
   products: [
     // Products define the executables and libraries a package produces, making them visible to other packages.
     .library(
-      name: "CModule",
-      targets: ["CModule"]
-    ),
-
-    .library(
       name: "BugExample",
       targets: ["BugExample"]
     ),
@@ -41,7 +36,15 @@ let package = Package(
     // Targets are the basic building blocks of a package, defining a module or a test suite.
     // Targets can depend on other targets in this package and products from dependencies.
 
-    .target(name: "CModule"),
+    .systemLibrary(
+      name: "Python",
+      pkgConfig: "python3",
+      providers: [
+        .brew(["python3"]),
+        .apt(["python3-dev"]),
+        .yum(["python3-devel"]),
+      ]
+    ),
 
     .target(
       name: "BugExample",
@@ -52,7 +55,7 @@ let package = Package(
           moduleAliases: swiftUIToolChainBug,
           condition: .when(platforms: [.linux, .windows])
         ),
-        .target(name: "CModule"),
+        .target(name: "Python"),
       ]
     ),
 

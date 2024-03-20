@@ -15,5 +15,7 @@ jobs:
         with:
           swift-version: ${{ matrix.swift }}
       - uses: actions/checkout@v4
+      - name: 🐍 Install Python
+        run: brew install python3
       - name: 📦 Build
         run: swift build -c debug --target SwiftUIToolchainBug
