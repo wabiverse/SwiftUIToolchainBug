@@ -16,4 +16,4 @@ jobs:
           swift-version: ${{ matrix.swift }}
       - uses: actions/checkout@v4
       - name: 📦 Build
-        run: swift build -c release
+        run: swift build -c release --target SwiftUIToolchainBug
