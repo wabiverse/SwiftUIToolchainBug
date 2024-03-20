@@ -1,12 +1,14 @@
-import CxxModule
+// import CxxModule
 import SwiftUI
 
 public enum Example
 {  
   public static func doSomething() -> Void
   {
-    var cxx = CxxModule()
+    // var cxx = CxxModule()
 
-    cxx.doSomething()
+    // cxx.doSomething()
+
+    print("Called doSomething()")
   }
 }

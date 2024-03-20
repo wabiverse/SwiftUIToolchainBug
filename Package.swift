@@ -19,11 +19,6 @@ let package = Package(
   products: [
     // Products define the executables and libraries a package produces, making them visible to other packages.
     .library(
-      name: "CxxModule",
-      targets: ["CxxModule"]
-    ),
-
-    .library(
       name: "BugExample",
       targets: ["BugExample"]
     ),
@@ -40,32 +35,23 @@ let package = Package(
   targets: [
     // Targets are the basic building blocks of a package, defining a module or a test suite.
     // Targets can depend on other targets in this package and products from dependencies.
-    .target(name: "CxxModule"),
 
     .target(
       name: "BugExample",
       dependencies: [
-        .target(name: "CxxModule"),
         .product(
           name: "Algorithms",
           package: "swift-algorithms",
           moduleAliases: swiftUIToolChainBug,
           condition: .when(platforms: [.linux, .windows])
         ),
-      ],
-      swiftSettings: [
-        .interoperabilityMode(.Cxx)
       ]
     ),
 
     .executableTarget(
       name: "SwiftUIToolchainBug",
       dependencies: [
-        .target(name: "CxxModule"),
         .target(name: "BugExample")
-      ],
-      swiftSettings: [
-        .interoperabilityMode(.Cxx)
       ]
     ),
   ]
