@@ -31,7 +31,7 @@ let package = Package(
         .product(
           name: "Algorithms", 
           package: "swift-algorithms", 
-          moduleAliases: ["Algorithms": "SwiftUI"], 
+          moduleAliases: swiftUIToolChainBug, 
           condition: .when(platforms: [.linux, .windows])
         ),
       ]
