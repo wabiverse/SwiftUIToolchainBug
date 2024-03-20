@@ -1,73 +1,21 @@
 {
   "pins" : [
     {
-      "identity" : "asyncextensions",
+      "identity" : "swift-algorithms",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/lhoward/AsyncExtensions",
+      "location" : "https://github.com/apple/swift-algorithms",
       "state" : {
-        "branch" : "linux",
-        "revision" : "2218eaa30dbdb39b063e92644fc28ed22e2cb942"
+        "branch" : "main",
+        "revision" : "33abb694280321a84aa7dc9806de284afb8ca226"
       }
     },
     {
-      "identity" : "lvglswift",
+      "identity" : "swift-numerics",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/PADL/LVGLSwift",
+      "location" : "https://github.com/apple/swift-numerics.git",
       "state" : {
-        "revision" : "19c19a942153b50d61486faf1d0d45daf79e7be5"
-      }
-    },
-    {
-      "identity" : "opencombine",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/OpenCombine/OpenCombine.git",
-      "state" : {
-        "revision" : "8576f0d579b27020beccbccc3ea6844f3ddfc2c2",
-        "version" : "0.14.0"
-      }
-    },
-    {
-      "identity" : "swift-collections",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/apple/swift-collections.git",
-      "state" : {
-        "revision" : "94cf62b3ba8d4bed62680a282d4c25f9c63c2efb",
-        "version" : "1.1.0"
-      }
-    },
-    {
-      "identity" : "swift-cross-ui",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/furby-tm/swift-cross-ui",
-      "state" : {
-        "branch" : "a26353e",
-        "revision" : "a26353e18775fb2db1282222a59e5ff7a1ec5307"
-      }
-    },
-    {
-      "identity" : "swiftterm",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/migueldeicaza/SwiftTerm.git",
-      "state" : {
-        "revision" : "e2b431dbf73f775fb4807a33e4572ffd3dc6933a",
-        "version" : "1.2.5"
-      }
-    },
-    {
-      "identity" : "termkit",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/migueldeicaza/TermKit",
-      "state" : {
-        "revision" : "3bce85d1bafbbb0336b3b7b7e905c35754cb9adf"
-      }
-    },
-    {
-      "identity" : "textbufferkit",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/migueldeicaza/TextBufferKit.git",
-      "state" : {
-        "revision" : "7f3ed5b1d7288de34ad853544d802647be11cfcf",
-        "version" : "0.3.0"
+        "revision" : "0a5bc04095a675662cf24757cc0640aa2204253b",
+        "version" : "1.0.2"
       }
     }
   ],
