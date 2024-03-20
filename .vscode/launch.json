@@ -1,0 +1,64 @@
+{
+  "configurations": [
+    {
+      "type": "lldb",
+      "request": "launch",
+      "sourceLanguages": ["swift"],
+      "args": [],
+      "cwd": "${workspaceFolder:fake}",
+      "name": "Debug SwiftUIToolChainBug",
+      "program": "${workspaceFolder:fake}/.build/debug/SwiftUIToolChainBug",
+      "preLaunchTask": "swift: Build Debug SwiftUIToolChainBug"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "sourceLanguages": ["swift"],
+      "args": [],
+      "cwd": "${workspaceFolder:fake}",
+      "name": "Release SwiftUIToolChainBug",
+      "program": "${workspaceFolder:fake}/.build/release/SwiftUIToolChainBug",
+      "preLaunchTask": "swift: Build Release SwiftUIToolChainBug"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "sourceLanguages": ["swift"],
+      "args": [],
+      "cwd": "${workspaceFolder:SwiftUIToolchainBug}",
+      "name": "Debug SwiftUIToolchainBug",
+      "program": "${workspaceFolder:SwiftUIToolchainBug}/.build/debug/SwiftUIToolchainBug",
+      "preLaunchTask": "swift: Build Debug SwiftUIToolchainBug"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "sourceLanguages": ["swift"],
+      "args": [],
+      "cwd": "${workspaceFolder:SwiftUIToolchainBug}",
+      "name": "Release SwiftUIToolchainBug",
+      "program": "${workspaceFolder:SwiftUIToolchainBug}/.build/release/SwiftUIToolchainBug",
+      "preLaunchTask": "swift: Build Release SwiftUIToolchainBug"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "sourceLanguages": ["swift"],
+      "args": [],
+      "cwd": "${workspaceFolder:SwiftUIToolchainBug}",
+      "name": "Debug SwiftUIToolchainBugFix",
+      "program": "${workspaceFolder:SwiftUIToolchainBug}/.build/debug/SwiftUIToolchainBugFix",
+      "preLaunchTask": "swift: Build Debug SwiftUIToolchainBugFix"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "sourceLanguages": ["swift"],
+      "args": [],
+      "cwd": "${workspaceFolder:SwiftUIToolchainBug}",
+      "name": "Release SwiftUIToolchainBugFix",
+      "program": "${workspaceFolder:SwiftUIToolchainBug}/.build/release/SwiftUIToolchainBugFix",
+      "preLaunchTask": "swift: Build Release SwiftUIToolchainBugFix"
+    }
+  ]
+}
