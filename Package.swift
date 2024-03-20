@@ -4,7 +4,7 @@ import PackageDescription
 #if os(macOS)
   let swiftUIToolChainBug: [String: String]? = nil
 #else /* os(macOS) */
-  let swiftUIToolChainBug: [String: String]? = ["GtkBackend": "SwiftUI"]
+  let swiftUIToolChainBug: [String: String]? = ["SwiftCrossUI": "SwiftUI"]
 #endif /* !os(macOS) */
 
 let package = Package(
