@@ -45,6 +45,11 @@ let package = Package(
           moduleAliases: swiftUIToolChainBug,
           condition: .when(platforms: [.linux, .windows])
         ),
+        .product(
+          name: "GtkBackend",
+          package: "swift-cross-ui",
+          condition: .when(platforms: [.linux, .windows])
+        ),
       ]
     ),
 
