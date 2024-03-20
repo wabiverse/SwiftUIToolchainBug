@@ -1,4 +1,3 @@
-import Python
 import SwiftUI
 
 public enum Example
