@@ -1,4 +1,5 @@
 import Foundation
+import BugExample
 import SwiftUI
 
 @main
@@ -6,6 +7,7 @@ public struct SwiftUIToolchainBug
 {
   static func main()
   {
-    print("Hello, world!")
+    Example.doSomething()
+    print("will exit now...")
   }
 }
