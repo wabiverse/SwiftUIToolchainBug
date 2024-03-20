@@ -4,11 +4,18 @@ import PackageDescription
 #if os(macOS)
   let swiftUIToolChainBug: [String: String]? = nil
 #else /* os(macOS) */
-  let swiftUIToolChainBug: [String: String]? = ["Algorithms": "SwiftUI"]
+  let swiftUIToolChainBug: [String: String]? = ["SwiftCrossUI": "SwiftUI"]
 #endif /* !os(macOS) */
 
 let package = Package(
   name: "SwiftUIToolchainBug",
+  platforms: [
+    .macOS(.v14),
+    .visionOS(.v1),
+    .iOS(.v17),
+    .tvOS(.v17),
+    .watchOS(.v10)
+  ],
   products: [
     // Products define the executables and libraries a package produces, making them visible to other packages.
     .library(
@@ -28,7 +35,7 @@ let package = Package(
   ],
   dependencies: [
     // Dependencies declare other packages that this package depends on.
-    .package(url: "https://github.com/apple/swift-algorithms", branch: "main"),
+    .package(url: "https://github.com/furby-tm/swift-cross-ui", revision: "a26353e")
   ],
   targets: [
     // Targets are the basic building blocks of a package, defining a module or a test suite.
@@ -40,9 +47,14 @@ let package = Package(
       dependencies: [
         .target(name: "CxxModule"),
         .product(
-          name: "Algorithms", 
-          package: "swift-algorithms", 
-          moduleAliases: ["Algorithms": "SwiftUI"], 
+          name: "SwiftCrossUI",
+          package: "swift-cross-ui",
+          moduleAliases: swiftUIToolChainBug,
+          condition: .when(platforms: [.linux, .windows])
+        ),
+        .product(
+          name: "GtkBackend",
+          package: "swift-cross-ui",
           condition: .when(platforms: [.linux, .windows])
         ),
       ],
