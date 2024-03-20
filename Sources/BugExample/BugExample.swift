@@ -1,4 +1,5 @@
 // import CxxModule
+import CModule
 import SwiftUI
 
 public enum Example
@@ -8,7 +9,12 @@ public enum Example
     // var cxx = CxxModule()
 
     // cxx.doSomething()
+    
+    var c = CModule(id: 42, doSomething: 
+    { 
+      CModuleDoSomething($0)
+    })
 
-    print("Called doSomething()")
+    c.doSomething(&c)
   }
 }
