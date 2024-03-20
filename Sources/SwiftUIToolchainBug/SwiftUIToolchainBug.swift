@@ -1,6 +1,6 @@
 import Foundation
 import BugExample
-import SwiftUI
+import NotSwiftUI
 
 @main
 public struct SwiftUIToolchainBug 
